@@ -19,5 +19,20 @@ int main (int argc, char *argv[]) {
     float notaMinima = 10.0;
     return 0;
 
-    
+    ingresarNotas(notas);
+}
+void ingresarNotas(float notas[5][3]) {
+    for (int i = 0; i < 5; i++) {
+        printf("\nESTUDIANTE NO %d \n", i + 1);
+        for (int j = 0; j < 3; j++) {
+            do {
+                printf("  Ingresa una nota de la asignatura %d: ", j + 1);
+                scanf("%f", &notas[i][j]);
+
+                if (notas[i][j] < 0 || notas[i][j] > 10) {
+                    printf("  ERROR: LA NOTA DEBE ESTAR EN EL RANGO DE 0 HASTA 10\n");
+                }
+            } while (notas[i][j] < 0 || notas[i][j] > 10);
+        }
+    }
 }
