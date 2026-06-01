@@ -24,6 +24,12 @@ int main (int argc, char *argv[]) {
     procesarEstudiantes(notas, &totalAprobados, &totalReprobados);
     procesarAsignaturas(notas);
     buscarExtremos(notas, &notaMaxima, &notaMinima);
+    printf("\n=========================================\n");
+    printf("La nota maxima de todo el curso es: %.2f\n", notaMaxima);
+    printf("La nota minima de todo el curso es: %.2f\n", notaMinima);
+    printf("El total de aprobados fue: %d\n", totalAprobados);
+    printf("El total de reprobados fue: %d\n", totalReprobados);
+    printf("=========================================\n");
 }
 void ingresarNotas(float notas[5][3]) {
     for (int i = 0; i < 5; i++) {
